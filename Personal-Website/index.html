@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UI-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Personal Website - SandrZeus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Profiles</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1>Hi, I'm <span>Sandro Megrelishvili</span></h1>
+        </div>
+    </div>
+</div>
+<!---------------about------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/me.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>As someone deeply committed to personal and professional development, I find immense fulfillment in continuously expanding my horizons. Eager to learn, I approach each day with an open mind and a hunger for new knowledge and experiences. This drive isn't just about advancing in my career; it's about becoming the best version of myself in every aspect of life. I thrive in team environments, understanding that collaboration is key to success. I value the diverse perspectives and talents of my colleagues, and I'm always eager to contribute my own unique skills. My attention to detail ensures that I don't just complete tasks, but that I do so with precision and excellence. My ambition for growth isn't just a fleeting desire. it's a deeply ingrained part of who I am. I actively seek out opportunities to challenge myself and expand my skill set, whether through formal education, workshops, or personal projects. This proactive approach drives me to continually improve and evolve. However, I'm also realistic about the challenges that come with pursuing ambitious goals. I know that success isn't always immediate, and setbacks are inevitable. But it's my perseverance and resilience that truly set me apart. In the face of obstacles, I don't falter. I adapt, learn, and press forward with even greater determination. This isn't just a persona I adopt, it's who I am at my core. And I believe that this authenticity, coupled with my drive and dedication, makes me a valuable asset to any team or endeavor.</p>
+
+                <div class= "tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>University of Europe for Applied Sciences (2022-2025)</span><br>Software Engineering</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>None</span><br>None</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------Skills--------------->
+<div id="skills">
+    <div class="image-container">
+        <h1 class="sub-title2">Skills</h1>
+        <div class="gallery">
+        <img src="images/back.png" id="backBtn">
+        <div class="image-wrapper">
+                <div>
+                    <span><img class="skillimg" src="images/Python.png"></span>
+                    <span><img class="skillimg" src="images/java.png"></span>
+                    <span><img class="skillimg" src="images/js.png"></span>
+                </div>
+                <div>
+                    <span><img class="skillimg" src="images/html.png"></span>
+                    <span><img class="skillimg" src="images/css.png"></span>
+                    <span><img class="skillimg" src="images/C.png"></span>
+                </div>
+                <div>
+                    <span><img class="skillimg" src="images/c++.png"></span>
+                    <span><img class="skillimg" src="images/GoLang.png"></span>
+                    <span><img class="skillimg" src="images/mysql.png"></span>
+                </div>
+        </div>
+        <img src="images/front.png" id="frontBtn">
+        </div>
+    </div>
+</div>
+        
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    let scrollContainer = document.querySelector(".image-wrapper");
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("frontBtn");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+        scrollContainer.style.scrollBehavior = "auto";
+    });
+
+    frontBtn.addEventListener("click", ()=>{
+        scrollContainer.scrollLeft +=300;
+        scrollContainer.style.scrollBehavior = "smooth";
+    });
+
+    backBtn.addEventListener("click", ()=>{
+        scrollContainer.scrollLeft -=300;
+        scrollContainer.style.scrollBehavior = "smooth";
+    });
+</script>
+
+</body>
+</html>
