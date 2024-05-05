@@ -174,3 +174,49 @@ nav ul li a:hover::after{
     cursor: pointer;
     margin: 40px;
 }
+/*--------------Profiles---------*/
+#profiles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sub-title3{
+    font-size: 60px;
+    font-weight: 600;
+    color:#fff;
+    text-align: center;
+}
+.prof-col-1{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    margin: 15px;
+}
+.prof-col-2{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    margin: 15px;
+}
+.prof-col-3{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    margin: 15px;
+}
+.prof-col-4{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    margin: 15px;
+}
+.prof-col-5{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    margin: 15px;
+}
+.prof-images{
+    display: flex;
+    align-items: center;
+}
